@@ -10,7 +10,7 @@ export default {
   
 <style lang="scss">
 // 动态的移入css
-@import '../../assets/css/tabbar/iconfont';
+// @import '../../assets/css/tabbar/iconfont';
 
 #tab-bar{
  position:fixed;
