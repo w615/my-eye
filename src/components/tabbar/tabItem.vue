@@ -2,7 +2,7 @@
   <div class="tabbar-item" @click="itemClick">  
     <div v-if=" !isActive"> <slot  name="item-icon"></slot></div>     
     <div v-else><slot  name="item-iconActive"></slot></div>      
-    <div :class="{active: isActive}" ><slot name="item-text"></slot></div>       
+    <div :style="activeStyle" ><slot name="item-text"></slot></div>       
 </div>   
 </template>
 <script>
@@ -11,10 +11,22 @@ export default {
   // 动态传入路由
   props:{
     path:String,
+    activeColor:{
+      type:String,
+      default:"red"
+      }
+  },
+  computed:{
+    isActive(){
+      return this.$route.path.indexOf(this.path) !== -1;
+    },
+    activeStyle(){
+      return this.isActive ? {color: this.activeColor} : {}
+    }
   },
   data(){
     return {
-      isActive:true
+      // isActive:true
     }
   },
   methods:{
@@ -33,7 +45,6 @@ export default {
   height:3.0625rem;
   font-size:14px;
 }
-.active{
-  color:red;
-}
+// 颜色不能写死 动态设置最好
+
 </style>

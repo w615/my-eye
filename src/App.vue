@@ -1,20 +1,20 @@
 <template>
   <div id="app">
     <!-- 无法接收路由 -->
-    <Home/> 
+    <!-- <Home/>  -->
        <router-view></router-view>  
        <MainTabBar/>
   </div>
 </template>
 <script>
 import MainTabBar from './components/MainTabBar'
-import Home from './views/home/Home'
+
 
 export default{
   name:'App',
   components:{
     MainTabBar,
-    Home,
+   
   }
 }
 </script>

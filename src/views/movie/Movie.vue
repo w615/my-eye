@@ -6,10 +6,10 @@
 
 <script>
 export default {
-  name:"Movie"
+  name:"Movie",
 }
 </script>
 
-<style lang="scss" scope>
+<style lang="scss">
 
 </style>
